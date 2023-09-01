@@ -60,3 +60,13 @@ html {
     border-radius: 25px;
     width: 10%;
 }
+
+.card {
+    width: 250px;
+    height: 100px;
+}
+
+.profile {
+    width: 32px;
+    height: 32px;
+}
