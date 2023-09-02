@@ -34,12 +34,17 @@ async function jsonList(item) {
   // get the required details from the local.json file to the div element using innerHTML
   contain.innerHTML = `
     <li class="bg-light text-dark">
-       <img src="${item.profile}" class="profile">
-       <h4 class="fs-3"> ${item.sender}</h4> 
-       <p class="fs-6 text-muted">${item.subject}<p>
-       <p class=""> ${item.time}<p>
-       <p>${item.content}</p>
-       
+      <div class="d-flex justify-content-between">
+        <img src="${item.profile}" class="profile">
+        <div class="">
+          <div class="d-flex justify-content-between">
+            <h4 class="fs-3"> ${item.sender}</h4> 
+            <p class=""> ${item.time}<p>
+          </div>
+        <p class="fs-6 text-muted">${item.subject}<p>
+        </div>
+      </div>
+      <p>${item.content}</p>
     </li>`;
   // attach the newly created div element to the original div element, in this case to the class '.output'
   main.append(contain);
