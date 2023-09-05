@@ -67,8 +67,13 @@ ul > li, li {
     border-radius: 25px;
 }
 
-.row {
-    margin: 0 auto;
+body {
+    width: 100% !important;
+    margin: 0 auto !important;
+}
+
+main {
+    justify-content: center;
 }
 
 .middle-row {
