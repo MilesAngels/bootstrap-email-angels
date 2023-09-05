@@ -38,7 +38,22 @@ ul > li, li {
 
 .navbar-toggler {
     padding: 0;
+    margin: 0 12px;
     border: none;
+    z-index: 1;
+}
+
+.navbar-nav {
+    /* position: absolute;
+    top: -2rem;
+    left: min(-25px);
+    padding-top: 100px; */
+    background-color: white;
+}
+
+
+.nav-item {
+    width: 50%;
 }
 
 .search {
@@ -69,10 +84,16 @@ ul > li, li {
     width: 10%;
 }
 
+.email-section {
+    
+}
+
 .card {
     padding: 2rem;
     border-radius: 25px;
     margin: 20px 0;
+    width: min(100%, 350px);
+    background: transparent;
 }
 
 .profile {
@@ -80,3 +101,4 @@ ul > li, li {
     height: 36px;
     border-radius: 50%;
 }
+

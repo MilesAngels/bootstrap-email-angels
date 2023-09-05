@@ -14,13 +14,26 @@
 </head>
 <body class="container row">
     <div class="row nav-color">
-        <nav class="navbar col m-auto">
-            <div class="container-xl">
-              <a class="navbar-brand">Navbar</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </div>
+        <nav class="navbar navbar-expand-lg col m-auto">
+            <div class="container">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
         </nav>
         <form class="d-flex col-10 search" role="search">
             <input class="form-control" type="search" placeholder="Search" aria-label="Search">
@@ -36,7 +49,7 @@
                 <button type="button" class="btn btn-primary justify-content-end col filter-button">Filter</button>
             </div>
         </div>
-        <section>
+        <section class="email-section">
 
         </section>
     </main>

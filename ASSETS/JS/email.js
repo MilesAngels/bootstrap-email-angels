@@ -33,13 +33,13 @@ async function jsonList(item) {
   const contain = document.createElement("article");
   // get the required details from the local.json file to the div element using innerHTML
   contain.innerHTML = `
-    <li class="bg-light text-dark">
+    <li class="text-dark">
       <div class="d-flex justify-content-between">
         <img src="${item.profile}" class="profile">
         <div class="">
-          <div class="d-flex justify-content-between">
-            <h4 class="fs-3"> ${item.sender}</h4> 
-            <p class=""> ${item.time}<p>
+          <div class="row">
+            <h4 class="fs-3 col"> ${item.sender}</h4> 
+            <p class="col"> ${item.time}<p>
           </div>
         <p class="fs-6 text-muted">${item.subject}<p>
         </div>
@@ -51,3 +51,4 @@ async function jsonList(item) {
   // Add styling to the displayed content
   contain.classList.add("card");
 }
+
