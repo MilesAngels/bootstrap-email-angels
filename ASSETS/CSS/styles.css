@@ -71,7 +71,7 @@ ul > li, li {
     .column {
         display: flex;
         flex-direction: column;
-        text-align: center;
+        align-items: flex-start !important;
     }
 
     /* Display Branding */
@@ -79,5 +79,6 @@ ul > li, li {
         display: block;
         background: url(../IMG/hockey-mask.png) no-repeat top left;
         height: 32px;
+        width: 32px;
     }
 }
