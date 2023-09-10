@@ -3,6 +3,7 @@
     --hyrule-theme-color2: #9FE7A6;
     --hyrule-theme-color3: #04B41B;
     --hyrule-theme-color4: #003B38;
+    --bs-body-color:var(--hyrule-theme-color4);
 }
 
 /* Reset */
@@ -17,6 +18,7 @@ html, body {
     padding: 1rem;
     background-color: var(--hyrule-theme-color1);
 }
+
 
 ul > li, li {
     list-style-type: none; /* Remove Bullet Points for List Items */
@@ -68,6 +70,24 @@ ul > li, li {
     align-items: center;
 }
 
+/* Search Bar */
+form {
+    margin: 1rem 0;
+}
+
+form > .form-control {
+    border-radius: 25px;
+}
+
+/* Focus, Other and Filter Buttons */
+.button-row {
+    margin: 2rem 0;
+}
+
+.btn-outline-1 {
+    border-color: var(--hyrule-theme-color4) !important;
+    border-radius: 20px;
+}
 /* Email Cards */
 .card {
     padding: 2rem;

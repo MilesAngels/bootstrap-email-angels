@@ -33,7 +33,7 @@ async function jsonList(item) {
   const contain = document.createElement("article");
   // get the required details from the local.json file to the div element using innerHTML
   contain.innerHTML = `
-    <li class="text-dark">
+    <li>
       <div class="d-flex justify-content-between">
         <img src="${item.profile}" class="profile">
         <div class="">
