@@ -11,10 +11,10 @@
     padding: 0;
 }
 
-html {
+html, body {
     width: 100%;
     margin: 0; 
-    padding: 0;
+    padding: 1rem;
     background-color: var(--hyrule-theme-color1);
 }
 
@@ -57,8 +57,11 @@ ul > li, li {
 }
 
 .navbar-nav {
-    margin: 1rem;
+    padding: 1rem;
+    margin: 0 !important;
+    width: 100%;
 }
+
 .nav-item {
     display: flex;
     justify-content: space-between;
@@ -71,7 +74,7 @@ ul > li, li {
     border-radius: 25px;
     margin: 20px 0px;
     width: 100%;
-    background: transparent;
+    background: white;
 }
 
 .profile {
