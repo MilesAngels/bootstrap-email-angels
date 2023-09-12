@@ -23,6 +23,7 @@ window.addEventListener("DOMContentLoaded", () => {
         // loop through the json data using forEach method
         // console.log(el);
         jsonList(el); // calling jsonList function
+        
       });
     });
 });
@@ -44,11 +45,10 @@ async function jsonList(item) {
         <p class="fs-6 text-muted">${item.subject}<p>
         </div>
       </div>
-      <p>${item.content}</p>
+      <p>${item.partial_content}</p>
     </li>`;
   // attach the newly created div element to the original div element, in this case to the class '.output'
   main.append(contain);
   // Add styling to the displayed content
   contain.classList.add("card");
 }
-

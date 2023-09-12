@@ -81,7 +81,7 @@ form > .form-control {
 
 /* Focus, Other and Filter Buttons */
 .button-row {
-    margin: 2rem 0;
+    margin: 2% 0;
 }
 
 .btn-outline-1 {
@@ -101,6 +101,17 @@ form > .form-control {
     width: 36px;
     height: 36px;
     border-radius: 50%;
+}
+
+/* Email Content */
+#email-content {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    #email-content {
+        display: block;
+    }    
 }
 
 /* Media Queries */
