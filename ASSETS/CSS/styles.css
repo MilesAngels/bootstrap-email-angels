@@ -6,6 +6,12 @@
     --bs-body-color:var(--hyrule-theme-color4);
 }
 
+/* Custom Font */
+@font-face {
+    font-family: reggaeOne;
+    src: url(./custom-font/ReggaeOne-Regular.ttf);
+}
+
 /* Reset */
 * {
     margin: 0;
@@ -92,7 +98,7 @@ form > .form-control {
 .card {
     padding: 2rem;
     border-radius: 25px;
-    margin: 20px 0px;
+    margin: 0px 0px 20px;
     width: 100%;
     background: white;
 }
@@ -101,6 +107,14 @@ form > .form-control {
     width: 36px;
     height: 36px;
     border-radius: 50%;
+}
+
+footer {
+    display: block;
+    height: 30px;
+    position:fixed;
+    bottom: 0;
+    left: 0;
 }
 
 /* Email Content */
@@ -112,6 +126,7 @@ form > .form-control {
     #email-content {
         display: block;
     }    
+
 }
 
 /* Media Queries */
@@ -128,5 +143,14 @@ form > .form-control {
         background: url(../IMG/hockey-mask.png) no-repeat top left;
         height: 32px;
         width: 32px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /* Footer -> Side Bar */
+    footer{
+        display: block;
+        height: 100%;
+        position: relative; 
     }
 }

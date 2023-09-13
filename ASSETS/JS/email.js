@@ -34,18 +34,18 @@ async function jsonList(item) {
   const contain = document.createElement("article");
   // get the required details from the local.json file to the div element using innerHTML
   contain.innerHTML = `
-    <li>
+    <li class="card-body">
       <div class="d-flex justify-content-between">
-        <img src="${item.profile}" class="profile">
-        <div class="">
-          <div class="row">
-            <h4 class="fs-3 col"> ${item.sender}</h4> 
-            <p class="col"> ${item.time}<p>
-          </div>
-        <p class="fs-6 text-muted">${item.subject}<p>
+        <div class="d-flex justify-content-start">
+          <img src="${item.profile}" class="profile">
+          <h4 class="ms-2 fs-3 card-title"> ${item.sender}</h4> 
         </div>
+        <div>
+          <p class="col text-muted"> ${item.time}<p>
+        </div>    
       </div>
-      <p class="text-truncate">${item.content}</p>
+      <p class="mt-3 text-muted">${item.subject}<p>
+      <p class="mt-2 text-truncate card-text">${item.content}</p>
     </li>`;
   // attach the newly created div element to the original div element, in this case to the class '.output'
   main.append(contain);
