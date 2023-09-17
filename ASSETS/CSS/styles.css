@@ -18,7 +18,7 @@
     padding: 0;
 }
 
-html, body {
+html,body {
     width: 100%;
     margin: 0; 
     padding: 1rem;
@@ -65,9 +65,13 @@ ul > li, li {
 }
 
 .navbar-nav {
-    padding: 1rem;
+    padding: 4%;
     margin: 0 !important;
     width: 100%;
+}
+
+.offcanvas {
+    width: 50% !important;
 }
 
 .nav-item {
@@ -137,6 +141,11 @@ footer {
         align-items: flex-start !important;
     }
 
+
+    .offcanvas  {
+        margin-top: 2.25rem;
+    }
+
     /* Display Branding */
     .navbar-brand {
         display: block;
@@ -144,6 +153,7 @@ footer {
         height: 32px;
         width: 32px;
     }
+    
 }
 
 @media screen and (min-width: 1024px) {
