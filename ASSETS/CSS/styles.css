@@ -99,7 +99,6 @@ form > .form-control {
     border-radius: 25px;
     background-color: var(--hyrule-theme-color1);
     color: var(--hyrule-theme-color4);
-    margin-left: 20px;
 }
 
 /* Focus, Other and Filter Buttons */
