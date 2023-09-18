@@ -22,7 +22,7 @@ html,body {
     width: 100%;
     margin: 0; 
     padding: 1rem;
-    background-color: var(--hyrule-theme-color1);
+    background-color: var(--hyrule-theme-color4);
 }
 
 
@@ -79,6 +79,14 @@ ul > li, li {
     justify-content: space-between;
     align-items: center;
 }
+.nav-item a {
+    color: var(--hyrule-theme-color1);
+}
+
+.custom-tooltip {
+    --bs-tooltip-bg: var(--hyrule-theme-color1);
+    --bs-tooltip-color: var(--hyrule-theme-color4);
+}
 
 /* Search Bar */
 form {
@@ -98,9 +106,16 @@ form > .form-control {
     border-color: var(--hyrule-theme-color4) !important;
     border-radius: 20px;
 }
+
 /* Email Cards */
+.vh-80 {
+    height: 81vh;
+    background-color: #003B38AA;
+}
+
+/* Modify preset card values */
 .card {
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 25px;
     margin: 0px 0px 20px;
     width: 100%;
@@ -152,6 +167,10 @@ footer {
         background: url(../IMG/hockey-mask.png) no-repeat top left;
         height: 32px;
         width: 32px;
+    }
+
+    .navbar-nav {
+        padding: 0;
     }
     
 }
