@@ -72,6 +72,7 @@ ul > li, li {
 
 .offcanvas {
     width: 50% !important;
+    background-color: var(--hyrule-theme-color4);
 }
 
 .nav-item {
@@ -79,6 +80,7 @@ ul > li, li {
     justify-content: space-between;
     align-items: center;
 }
+
 .nav-item a {
     color: var(--hyrule-theme-color1);
 }
@@ -95,6 +97,9 @@ form {
 
 form > .form-control {
     border-radius: 25px;
+    background-color: var(--hyrule-theme-color1);
+    color: var(--hyrule-theme-color4);
+    margin-left: 20px;
 }
 
 /* Focus, Other and Filter Buttons */
@@ -102,24 +107,27 @@ form > .form-control {
     margin: 2% 0;
 }
 
+.button-row > div > button, .button-row > div {
+    color: var(--hyrule-theme-color1);
+}
+
 .btn-outline-1 {
-    border-color: var(--hyrule-theme-color4) !important;
+    border-color: var(--hyrule-theme-color1) !important;
     border-radius: 20px;
 }
 
 /* Email Cards */
-.vh-80 {
-    height: 81vh;
-    background-color: #003B38AA;
-}
-
 /* Modify preset card values */
 .card {
     padding: 1.5rem;
     border-radius: 25px;
     margin: 0px 0px 20px;
     width: 100%;
-    background: white;
+    background: var(--hyrule-theme-color1);
+}
+
+.shadow {
+    box-shadow: 0 0.5rem 1rem rgba(159, 231, 166, 0.4) !important;
 }
 
 .profile {

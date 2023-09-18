@@ -51,4 +51,5 @@ async function jsonList(item) {
   main.append(contain);
   // Add styling to the displayed content
   contain.classList.add("card");
+  contain.classList.add("shadow");
 }
