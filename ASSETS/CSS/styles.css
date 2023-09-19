@@ -1,3 +1,6 @@
+/*****************************/
+/******* Custom Colors *******/
+/*****************************/
 :root {
     --hyrule-theme-color1: #FFF6D7;
     --hyrule-theme-color2: #9FE7A6;
@@ -6,13 +9,9 @@
     --bs-body-color:var(--hyrule-theme-color4);
 }
 
-/* Custom Font */
-@font-face {
-    font-family: reggaeOne;
-    src: url(./custom-font/ReggaeOne-Regular.ttf);
-}
-
-/* Reset */
+/*****************************/
+/*********** Reset ***********/
+/*****************************/
 * {
     margin: 0;
     padding: 0;
@@ -25,10 +24,18 @@ html,body {
     background-color: var(--hyrule-theme-color4);
 }
 
-
 ul > li, li {
     list-style-type: none; /* Remove Bullet Points for List Items */
 }
+
+/*****************************/
+/******** Custom Font ********/
+/*****************************/
+@font-face {
+    font-family: reggaeOne;
+    src: url(./custom-font/ReggaeOne-Regular.ttf);
+}
+
 
 .container-fluid, .full-width, footer, .container {
     width: 100%; /* Force full width */
@@ -36,7 +43,9 @@ ul > li, li {
     margin: 0; /* Remove Margin */
 }
 
-/******* Navbar ******/
+/*****************************/
+/********* Navigation ********/
+/*****************************/
 .navbar {
     display: block;
 }
@@ -60,8 +69,9 @@ ul > li, li {
     z-index: 1;
 }
 
+/* Change navbar toggle icon color */
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 59, 56, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 246, 215, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 .navbar-nav {
@@ -70,23 +80,29 @@ ul > li, li {
     width: 100%;
 }
 
+/* Make offcanvas only 30% to display nav-items when in mobile*/
 .offcanvas {
-    width: 50% !important;
+    width: 30% !important;
     background-color: var(--hyrule-theme-color4);
 }
 
+/*  */
 .nav-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    color: var(--hyrule-theme-color1);
 }
 
-.nav-item a {
+/* Keep text color of nav-link in normal state, hover state and focus state */
+.nav-link, .nav-link:hover, .nav-link:focus {
     color: var(--hyrule-theme-color1);
 }
 
 .custom-tooltip {
     --bs-tooltip-bg: var(--hyrule-theme-color1);
+    font-weight: 600;
     --bs-tooltip-color: var(--hyrule-theme-color4);
 }
 
@@ -125,8 +141,8 @@ form > .form-control {
     background: var(--hyrule-theme-color1);
 }
 
-.shadow {
-    box-shadow: 0 0.5rem 1rem rgba(159, 231, 166, 0.4) !important;
+.shadow:hover {
+    box-shadow: 0 0.5rem 0.5rem rgba(159, 231, 166, 0.5) !important;
 }
 
 .profile {
@@ -151,7 +167,18 @@ footer {
 @media screen and (min-width: 768px) {
     #email-content {
         display: block;
-    }    
+    }
+    
+    #email-content > div {
+        color: var(--hyrule-theme-color1);
+        /* From https://css.glass */
+        background: rgba(255, 246, 215, 0.28);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 246, 215, 0.05);
+    }
 
 }
 
@@ -188,5 +215,27 @@ footer {
         display: block;
         height: 100%;
         position: relative; 
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .tooltip {
+        display: none;
+    }
+    .nav-item::after {
+        content:'';
+        position: absolute;
+        width: 80%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        background-color: var(--hyrule-theme-color2);
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+    
+    .nav-item:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
     }
 }
