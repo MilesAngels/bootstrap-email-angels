@@ -64,7 +64,6 @@ ul > li, li {
 
 .navbar-toggler {
     padding: 0;
-    margin: 0 12px;
     border: none;
     z-index: 1;
 }
@@ -151,33 +150,53 @@ form > .form-control {
     border-radius: 50%;
 }
 
-footer {
-    display: block;
-    height: 30px;
-    position:fixed;
-    bottom: 0;
-    left: 0;
-}
-
 /* Email Content */
 #email-content {
     display: none;
 }
+
 
 @media screen and (min-width: 768px) {
     #email-content {
         display: block;
     }
     
+    /* Modify email-content div to creative background */
+    /* Background from https://css-pattern.com/ */
     #email-content > div {
         color: var(--hyrule-theme-color1);
+        --s: 30px; /* control the size */
+            --c1: var(--hyrule-theme-color1);
+            --c2: var(--hyrule-theme-color2);
+            --_s:37.5% 12.5% at 62.5%;
+            --_g:34% 99%,#0000 101%;
+            --g1:radial-gradient(var(--_s) 100%,#0000 32%,var(--c1) var(--_g));
+            --g2:radial-gradient(var(--_s) 0   ,#0000 32%,var(--c1) var(--_g));
+            --g3:radial-gradient(var(--_s) 100%,#0000 32%,var(--c2) var(--_g));
+            --g4:radial-gradient(var(--_s) 0   ,#0000 32%,var(--c2) var(--_g));
+            background:
+              var(--g1),
+              var(--g2) 0                calc(3*var(--s)),
+              var(--g3) var(--s)         calc(3*var(--s)),
+              var(--g4) var(--s)         calc(6*var(--s)),
+              var(--g1) calc(2*var(--s)) calc(6*var(--s)),
+              var(--g2) calc(2*var(--s)) calc(9*var(--s)),
+              var(--g3) calc(3*var(--s)) calc(9*var(--s)),
+              var(--g4) calc(3*var(--s)) 0,
+              repeating-linear-gradient(var(--c1) 0 25%,var(--c2) 0 50%);
+            background-size: calc(4*var(--s)) calc(12*var(--s));
+            border-radius: 25px;
+    }
+
+    .inner-email-content {
+        color: var(--hyrule-theme-color4);
         /* From https://css.glass */
-        background: rgba(255, 246, 215, 0.28);
+        background: rgba(255, 246, 215, 1);
         border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
-        border: 1px solid rgba(255, 246, 215, 0.05);
+        border: 1px solid rgba(4, 180, 27, 0.28);
     }
 
 }
@@ -220,9 +239,12 @@ footer {
 
 @media screen and (min-width: 1440px) {
     .tooltip {
+        /* Hide tooltip at 1440px */
         display: none;
     }
+
     .nav-item::after {
+        /* Add animated underline for each nav-item */
         content:'';
         position: absolute;
         width: 80%;
@@ -235,6 +257,7 @@ footer {
     }
     
     .nav-item:hover::after {
+        /* Animate underline for nav-item. Trigger is hover. */
         transform: scaleX(1);
         transform-origin: bottom left;
     }
