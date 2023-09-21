@@ -57,7 +57,7 @@ ul > li, li {
     margin: 1rem;
 }
 
-.navbar-brand {
+.navbar-brand img, .navbar-brand p {
     /* Hide branding on mobile */
     display: none;
 }
@@ -214,16 +214,17 @@ form > .form-control {
         margin-top: 2.25rem;
     }
 
-    /* Display Branding */
-    .navbar-brand {
-        display: block;
-        background: url(../IMG/hockey-mask.png) no-repeat top left;
-        height: 32px;
-        width: 32px;
-    }
-
     .navbar-nav {
         padding: 0;
+    }
+
+    /* Display Branding */
+    .navbar-logo {
+        display: block;
+        background-image: url(../IMG/hm-sm-logo.png);
+        width: 32px;
+        height: 32px;
+        z-index: 1;
     }
     
 }
@@ -235,6 +236,7 @@ form > .form-control {
         height: 100%;
         position: relative; 
     }
+
 }
 
 @media screen and (min-width: 1440px) {
