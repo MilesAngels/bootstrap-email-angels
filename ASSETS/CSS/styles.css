@@ -28,15 +28,6 @@ ul > li, li {
     list-style-type: none; /* Remove Bullet Points for List Items */
 }
 
-/*****************************/
-/******** Custom Font ********/
-/*****************************/
-@font-face {
-    font-family: reggaeOne;
-    src: url(./custom-font/ReggaeOne-Regular.ttf);
-}
-
-
 .container-fluid, .full-width, footer, .container {
     width: 100%; /* Force full width */
     padding: 0; /* Remove Padding */
@@ -57,10 +48,6 @@ ul > li, li {
     margin: 1rem;
 }
 
-.navbar-brand img, .navbar-brand p {
-    /* Hide branding on mobile */
-    display: none;
-}
 
 .navbar-toggler {
     padding: 0;
@@ -75,28 +62,55 @@ ul > li, li {
 
 .navbar-nav {
     padding: 4%;
-    margin: 0 !important;
+    margin: 20px 0 0 0 !important;
     width: 100%;
 }
 
 /* Make offcanvas only 30% to display nav-items when in mobile*/
 .offcanvas {
-    width: 30% !important;
+    width: min(50%, 200px) !important;
     background-color: var(--hyrule-theme-color4);
 }
 
-/*  */
 .nav-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
+    font-weight: 600;
+}
+
+/* Font Awesome Icons In nav-items */
+.fa-solid { 
+    /* Applicable to Inbox, Starred, Sent, Drafts */
     color: var(--hyrule-theme-color1);
+}
+
+.fa-regular {
+    /* Applicable to Compose */
+    color: var(--hyrule-theme-color4);
 }
 
 /* Keep text color of nav-link in normal state, hover state and focus state */
 .nav-link, .nav-link:hover, .nav-link:focus {
     color: var(--hyrule-theme-color1);
+}
+
+#compose {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    padding: 0 10px;
+    margin-top: 20px;
+    width: 100%;
+    background-color: var(--hyrule-theme-color1);
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+#compose .nav-link {
+    color: var(--hyrule-theme-color4) !important;
 }
 
 .custom-tooltip {
@@ -105,7 +119,9 @@ ul > li, li {
     --bs-tooltip-color: var(--hyrule-theme-color4);
 }
 
-/* Search Bar */
+/*****************************/
+/********* Search Bar ********/
+/*****************************/
 form {
     margin: 1rem 0;
 }
@@ -114,8 +130,18 @@ form > .form-control {
     border-radius: 25px;
     background-color: var(--hyrule-theme-color1);
     color: var(--hyrule-theme-color4);
+    padding: 5px 10px 5px 35px;
 }
 
+.fa-magnifying-glass {
+    color: var(--hyrule-theme-color4);
+    position: absolute;
+    padding: 10px 15px;
+}
+
+/*****************************/
+/******* Row of Buttons ******/
+/*****************************/
 /* Focus, Other and Filter Buttons */
 .button-row {
     margin: 2% 0;
@@ -123,6 +149,7 @@ form > .form-control {
 
 .button-row > div > button, .button-row > div {
     color: var(--hyrule-theme-color1);
+    font-weight: 600;
 }
 
 .btn-outline-1 {
@@ -130,7 +157,9 @@ form > .form-control {
     border-radius: 20px;
 }
 
-/* Email Cards */
+/*****************************/
+/********* Email Cards *******/
+/*****************************/
 /* Modify preset card values */
 .card {
     padding: 1.5rem;
@@ -140,7 +169,8 @@ form > .form-control {
     background: var(--hyrule-theme-color1);
 }
 
-.shadow:hover {
+/* Hover Effect for card */
+.shadow:hover, .shadow-active {
     box-shadow: 0 0.5rem 0.5rem rgba(159, 231, 166, 0.5) !important;
 }
 
@@ -209,9 +239,9 @@ form > .form-control {
         align-items: flex-start !important;
     }
 
-
-    .offcanvas  {
-        margin-top: 2.25rem;
+    .navbar-expand-lg .offcanvas  {
+        margin-top: 0;
+        width: min(100%, 200px) !important;
     }
 
     .navbar-nav {
@@ -219,17 +249,22 @@ form > .form-control {
     }
 
     /* Display Branding */
-    .navbar-logo {
-        display: block;
-        background-image: url(../IMG/hm-sm-logo.png);
+    .navbar-brand #small-logo {
         width: 32px;
         height: 32px;
-        z-index: 1;
+    }
+
+    /* Modify Compose Button to fit */
+    #compose {
+        width: fit-content;
+        margin: 0;
+        padding: 5px;
     }
     
 }
 
 @media screen and (min-width: 1024px) {
+
     /* Footer -> Side Bar */
     footer{
         display: block;
@@ -237,9 +272,22 @@ form > .form-control {
         position: relative; 
     }
 
+
 }
 
 @media screen and (min-width: 1440px) {
+    #compose {
+        width: 100%;
+        margin: 0;
+        padding: 0 10px;
+    }
+
+    /* Display Branding Bigger Branding */
+    .navbar-brand #large-logo {
+        width: 100%;
+        z-index: 1;
+    }
+
     .tooltip {
         /* Hide tooltip at 1440px */
         display: none;
@@ -249,7 +297,7 @@ form > .form-control {
         /* Add animated underline for each nav-item */
         content:'';
         position: absolute;
-        width: 80%;
+        width: 90%;
         transform: scaleX(0);
         height: 2px;
         bottom: 0;
