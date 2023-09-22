@@ -119,6 +119,13 @@ ul > li, li {
     --bs-tooltip-color: var(--hyrule-theme-color4);
 }
 
+/* Compose Modal */
+.modal-content {
+    background-color: var(--hyrule-theme-color2);
+    border: 1px solid var(--hyrule-theme-color4);
+}
+
+
 /*****************************/
 /********* Search Bar ********/
 /*****************************/
@@ -263,11 +270,30 @@ form > .form-control {
     }
 
     /* Scrollable Email Cards Section */
-    
     .scrollable-email-cards {
-        height: 83vh;
+        height: 82vh;
         overflow-y: scroll;
     }
+
+    /* Template from W3-schools */
+    /* width */
+    .scrollable-email-cards::-webkit-scrollbar {
+        width: 10px;
+    }
+  
+    /* Track */
+    .scrollable-email-cards::-webkit-scrollbar-track {
+        background: var(--hyrule-theme-color1);
+        border-radius: 25px;
+    }
+  
+    /* Handle */
+    .scrollable-email-cards::-webkit-scrollbar-thumb {
+        background: rgb(0,59,56);
+        background: linear-gradient(360deg, rgba(0,59,56,1) 0%, rgba(4,180,27,1) 35%, rgba(159,231,166,1) 100%);
+        border-radius: 25px;
+    }
+  
 }
 
 @media screen and (min-width: 1024px) {

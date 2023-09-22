@@ -49,7 +49,7 @@
             <!-- Compose -->
             <li class="nav-item p-2" data-bs-toggle="tooltip" data-bs-title="Compose" data-bs-placement="right"
               data-bs-custom-class="custom-tooltip">
-              <button id="compose">
+              <button id="compose" data-bs-toggle="modal" data-bs-target="#compose-modal">
                 <i class="fa-regular fa-pen-to-square"></i>
                 <a class="nav-link d-lg-none d-xl-block" aria-current="page" href="#">Compose</a>
               </button>
@@ -161,6 +161,28 @@
         </article>
       </div>
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="compose-modal" tabindex="-1" aria-labelledby="compose-modal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="compose-modal-label">New Email</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="email-header">
+              <input type="email" placeholder="To:">
+              <input type="text" placeholder="Subject">
+            </div>
+            <textarea name="email-message" id="email-message"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Footer or side bar -->
     <footer class="bg-primary col-lg-1"></footer>
   </main>
@@ -170,6 +192,7 @@
     crossorigin="anonymous"></script>
   <script src="./ASSETS/JS/tooltip.js"></script>
   <script src="./ASSETS/JS/email.js"></script>
+  <script src="./ASSETS/JS/compose-modal.js"></script>
 </body>
 
 </html>
