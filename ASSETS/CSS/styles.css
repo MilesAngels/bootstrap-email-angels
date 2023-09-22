@@ -141,16 +141,20 @@ ul > li, li {
     justify-content: flex-start;
 }
 
-.modal-button {
+.modal-button, .modal-button:hover {
     background-color: var(--hyrule-theme-color4);
     color: var(--hyrule-theme-color1);
+}
+
+.modal-button:hover {
+    border: 1px solid var(--hyrule-theme-color2);
 }
 
 .rotate {
     rotate: -45deg;
 }
 
-.fa-paperclip, fa-trash {
+.fa-paperclip, .fa-trash {
     color: var(--hyrule-theme-color4);
     font-size: 20px;
 }
