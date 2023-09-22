@@ -120,11 +120,40 @@ ul > li, li {
 }
 
 /* Compose Modal */
-.modal-content {
-    background-color: var(--hyrule-theme-color2);
-    border: 1px solid var(--hyrule-theme-color4);
+.modal-header, .modal-footer {
+    border: none;
 }
 
+.modal-content {
+    background-color: var(--hyrule-theme-color2);
+    border: 2px solid var(--hyrule-theme-color4);
+}
+
+.email-header input, #email-message {
+    background-color: var(--hyrule-theme-color1);
+    border: 1px solid var(--hyrule-theme-color4);
+    width: 100%;
+    color: var(--hyrule-theme-color4);
+    font-weight: 500;
+}
+
+.modal-footer {
+    justify-content: flex-start;
+}
+
+.modal-button {
+    background-color: var(--hyrule-theme-color4);
+    color: var(--hyrule-theme-color1);
+}
+
+.rotate {
+    rotate: -45deg;
+}
+
+.fa-paperclip, fa-trash {
+    color: var(--hyrule-theme-color4);
+    font-size: 20px;
+}
 
 /*****************************/
 /********* Search Bar ********/
@@ -264,7 +293,7 @@ form > .form-control {
 
     /* Modify Compose Button to fit */
     #compose {
-        width: fit-content;
+        width: 100%;
         margin: 0;
         padding: 5px;
     }
@@ -326,7 +355,7 @@ form > .form-control {
         display: none;
     }
 
-    .nav-item::after {
+    .item-hover::after {
         /* Add animated underline for each nav-item */
         content:'';
         position: absolute;
@@ -339,9 +368,10 @@ form > .form-control {
         transition: transform 0.25s ease-out;
     }
     
-    .nav-item:hover::after {
+    .item-hover:hover::after {
         /* Animate underline for nav-item. Trigger is hover. */
         transform: scaleX(1);
         transform-origin: bottom left;
     }
+
 }

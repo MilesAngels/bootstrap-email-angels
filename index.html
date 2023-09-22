@@ -55,25 +55,25 @@
               </button>
             </li>
             <!-- Inbox -->
-            <li class="nav-item p-2" data-bs-toggle="tooltip" data-bs-title="Inbox" data-bs-placement="right"
+            <li class="nav-item item-hover p-2" data-bs-toggle="tooltip" data-bs-title="Inbox" data-bs-placement="right"
               data-bs-custom-class="custom-tooltip">
               <i class="fa-solid fa-inbox"></i>
               <a class="nav-link d-lg-none d-xl-block" aria-current="page" href="#">Inbox</a>
             </li>
             <!-- Starred -->
-            <li class="nav-item p-2" data-bs-toggle="tooltip" data-bs-title="Starred" data-bs-placement="right"
+            <li class="nav-item item-hover p-2" data-bs-toggle="tooltip" data-bs-title="Starred" data-bs-placement="right"
               data-bs-custom-class="custom-tooltip">
               <i class="fa-solid fa-star"></i>
               <a class="nav-link d-lg-none d-xl-block" href="#">Starred</a>
             </li>
             <!-- Sent -->
-            <li class="nav-item p-2" data-bs-toggle="tooltip" data-bs-title="Sent" data-bs-placement="right"
+            <li class="nav-item item-hover p-2" data-bs-toggle="tooltip" data-bs-title="Sent" data-bs-placement="right"
               data-bs-custom-class="custom-tooltip">
               <i class="fa-solid fa-paper-plane"></i>
               <a class="nav-link d-lg-none d-xl-block" href="#">Sent</a>
             </li>
             <!-- Drafts -->
-            <li class="nav-item p-2" data-bs-toggle="tooltip" data-bs-title="Drafts" data-bs-placement="right"
+            <li class="nav-item item-hover p-2" data-bs-toggle="tooltip" data-bs-title="Drafts" data-bs-placement="right"
               data-bs-custom-class="custom-tooltip">
               <i class="fa-solid fa-note-sticky"></i>
               <a class="nav-link d-lg-none d-xl-block" href="#">Drafts</a>
@@ -170,15 +170,23 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <div class="email-header">
-              <input type="email" placeholder="To:">
-              <input type="text" placeholder="Subject">
+            <div class="email-header d-flex flex-column justify-content-between py-2">
+              <input class="rounded-pill py-1 px-3 mb-2" type="email" placeholder="To:">
+              <input class="rounded-pill py-1 px-3 mb-4" type="text" placeholder="Subject">
             </div>
-            <textarea name="email-message" id="email-message"></textarea>
+            <textarea class="rounded p-3" name="email-message" id="email-message" rows="10" placeholder="Text here..."></textarea>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn modal-button" data-bs-dismiss="modal">
+              Send
+              <i class="ps-2 fa-solid fa-paper-plane"></i>
+            </button>
+            <button type="button" class="btn border-button">
+                <i class="rotate fa-solid fa-paperclip"></i>
+            </button>
+            <button type="button" class="btn border-button">
+              <i class="fa-solid fa-trash"></i>
+          </button>
           </div>
         </div>
       </div>
@@ -194,5 +202,4 @@
   <script src="./ASSETS/JS/email.js"></script>
   <script src="./ASSETS/JS/compose-modal.js"></script>
 </body>
-
 </html>
