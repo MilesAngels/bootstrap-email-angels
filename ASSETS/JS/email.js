@@ -44,8 +44,8 @@ async function jsonList(item) {
           <p class="col text-muted"> ${item.time}<p>
         </div>    
       </div>
-      <p class="mt-3 text-muted">${item.subject}<p>
-      <p class="mt-2 text-truncate card-text">${item.content}</p>
+      <p class="mt-2 text-muted">${item.subject}<p>
+      <p class="text-truncate card-text">${item.content}</p>
     </li>`;
   // attach the newly created div element to the original div element, in this case to the class '.output'
   main.append(contain);

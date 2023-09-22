@@ -162,10 +162,11 @@ form > .form-control {
 /*****************************/
 /* Modify preset card values */
 .card {
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 25px;
     margin: 0px 0px 20px;
     width: 100%;
+    height: fit-content;
     background: var(--hyrule-theme-color1);
 }
 
@@ -260,7 +261,13 @@ form > .form-control {
         margin: 0;
         padding: 5px;
     }
+
+    /* Scrollable Email Cards Section */
     
+    .scrollable-email-cards {
+        height: 83vh;
+        overflow-y: scroll;
+    }
 }
 
 @media screen and (min-width: 1024px) {
