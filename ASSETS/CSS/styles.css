@@ -137,6 +137,10 @@ ul > li, li {
     font-weight: 500;
 }
 
+.fa-print, .fa-reply, .fa-arrow-up-right-from-square, .fa-ellipsis-vertical {
+    color: var(--hyrule-theme-color4);
+}
+
 .modal-footer {
     justify-content: flex-start;
 }
@@ -200,6 +204,13 @@ form > .form-control {
 /*****************************/
 /********* Email Cards *******/
 /*****************************/
+.scrollable-email-cards {
+    background-color: hsla(177, 100%, 25%, 0.5);
+    padding: 1rem;
+    border-radius: 25px;
+    margin-top: 1rem;
+}
+
 /* Modify preset card values */
 .card {
     padding: 1rem;
@@ -211,7 +222,7 @@ form > .form-control {
 }
 
 /* Hover Effect for card */
-.shadow:hover, .shadow-active {
+.card-shadow {
     box-shadow: 0 0.5rem 0.5rem rgba(159, 231, 166, 0.5) !important;
 }
 
@@ -226,6 +237,11 @@ form > .form-control {
     display: none;
 }
 
+/* Right Side Bar */
+.right-sidebar {
+    background-color: var(--hyrule-theme-color1);
+    height: 100%;
+}
 
 @media screen and (min-width: 768px) {
     #email-content {
@@ -297,7 +313,7 @@ form > .form-control {
 
     /* Modify Compose Button to fit */
     #compose {
-        width: 100%;
+        width: fit-content;
         margin: 0;
         padding: 5px;
     }
@@ -306,6 +322,7 @@ form > .form-control {
     .scrollable-email-cards {
         height: 82vh;
         overflow-y: scroll;
+        margin-top: 0;
     }
 
     /* Template from W3-schools */
@@ -327,18 +344,6 @@ form > .form-control {
         border-radius: 25px;
     }
   
-}
-
-@media screen and (min-width: 1024px) {
-
-    /* Footer -> Side Bar */
-    footer{
-        display: block;
-        height: 100%;
-        position: relative; 
-    }
-
-
 }
 
 @media screen and (min-width: 1440px) {

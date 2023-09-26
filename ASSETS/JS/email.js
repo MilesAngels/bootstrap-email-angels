@@ -21,9 +21,7 @@ window.addEventListener("DOMContentLoaded", () => {
       main.innerHTML = ""; // Initial content is empty
       data.forEach((el) => {
         // loop through the json data using forEach method
-        // console.log(el);
-        jsonList(el); // calling jsonList function
-        
+        jsonList(el); // calling jsonList function 
       });
     });
 });
@@ -51,5 +49,13 @@ async function jsonList(item) {
   main.append(contain);
   // Add styling to the displayed content
   contain.classList.add("card");
-  contain.classList.add("shadow");
+
+  let allCards = [];
+  let card = document.getElementsByClassName('card');
+  for(let i = 0; i < card.length; i++) {
+    allCards.push(card[i]);
+  }
+  allCards[0].classList.add("card-shadow");
+
 }
+
