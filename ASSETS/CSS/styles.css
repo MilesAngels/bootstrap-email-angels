@@ -20,8 +20,11 @@
 html,body {
     width: 100%;
     margin: 0; 
-    padding: 1rem;
     background-color: var(--hyrule-theme-color4);
+}
+
+main {
+    height: 100vh;
 }
 
 ul > li, li {
@@ -39,6 +42,7 @@ ul > li, li {
 /*****************************/
 .navbar {
     display: block;
+    padding-left: 1rem;
 }
 
 .navbar-collapse .navbar-nav {
@@ -244,7 +248,7 @@ form > .form-control {
 .right-sidebar {
     background-color: var(--hyrule-theme-color1);
     height: 100%;
-    padding: 1rem 0;
+    padding: 1rem 0 0 0;
     margin: 0;
     align-items: center;
     line-height: 3rem;
