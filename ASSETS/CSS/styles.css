@@ -16,7 +16,6 @@
     margin: 0;
     padding: 0;
     font-family: 'Press Start 2P', cursive;
-    font-size: 0.8rem;
 }
 
 html,body {
@@ -40,11 +39,34 @@ ul > li, li {
 }
 
 /*****************************/
+/*********** Icons ***********/
+/*****************************/
+/* Font Awesome Icons In nav-items */
+.light-icon { 
+    /* Applicable to Inbox, Starred, Sent, Drafts */
+    color: var(--hyrule-theme-color1);
+}
+
+.dark-icon {
+    color: var(--hyrule-theme-color4);
+}
+
+.dark-icon,
+.light-icon {
+    font-size: 20px;
+}
+
+.inner-email-icons li .dark-icon {
+    font-size: 16px !important;
+}
+
+/*****************************/
 /********* Navigation ********/
 /*****************************/
 .navbar {
     display: block;
-    padding-left: 1rem;
+    padding-left: 0.5rem;
+    font-size: 0.8rem;
 }
 
 .navbar-collapse .navbar-nav {
@@ -58,7 +80,7 @@ ul > li, li {
 .navbar-toggler {
     padding: 0;
     border: none;
-    z-index: 1;
+    margin-top: 10px;
 }
 
 /* Change navbar toggle icon color */
@@ -68,11 +90,11 @@ ul > li, li {
 
 .navbar-nav {
     padding: 4%;
-    margin: 20px 0 0 0 !important;
+    
     width: 100%;
 }
 
-/* Make offcanvas only 30% to display nav-items when in mobile*/
+/* Make offcanvas only 50% - 200px max to display nav-items when in mobile - tablet*/
 .offcanvas {
     width: min(50%, 200px) !important;
     background-color: var(--hyrule-theme-color4);
@@ -84,17 +106,6 @@ ul > li, li {
     align-items: center;
     position: relative;
     font-weight: 600;
-}
-
-/* Font Awesome Icons In nav-items */
-.fa-solid { 
-    /* Applicable to Inbox, Starred, Sent, Drafts */
-    color: var(--hyrule-theme-color1);
-}
-
-.fa-regular {
-    /* Applicable to Compose */
-    color: var(--hyrule-theme-color4);
 }
 
 /* Keep text color of nav-link in normal state, hover state and focus state */
@@ -140,11 +151,7 @@ ul > li, li {
     border: 1px solid var(--hyrule-theme-color4);
     width: 100%;
     color: var(--hyrule-theme-color4);
-    font-weight: 500;
-}
-
-.fa-print, .fa-reply, .fa-arrow-up-right-from-square, .fa-ellipsis-vertical {
-    color: var(--hyrule-theme-color4);
+    font-weight: 200;
 }
 
 .modal-footer {
@@ -154,6 +161,7 @@ ul > li, li {
 .modal-button, .modal-button:hover {
     background-color: var(--hyrule-theme-color4);
     color: var(--hyrule-theme-color1);
+    padding: 0.5rem;
 }
 
 .modal-button:hover {
@@ -162,11 +170,6 @@ ul > li, li {
 
 .rotate {
     rotate: -45deg;
-}
-
-.fa-paperclip, .fa-trash, .fa-calendar, .fa-ellipsis {
-    color: var(--hyrule-theme-color4);
-    font-size: 20px;
 }
 
 /*****************************/
@@ -184,7 +187,6 @@ form > .form-control {
 }
 
 .fa-magnifying-glass {
-    color: var(--hyrule-theme-color4);
     position: absolute;
     padding: 10px 15px;
 }
@@ -195,6 +197,11 @@ form > .form-control {
 /* Focus, Other and Filter Buttons */
 .button-row {
     margin: 2% 0;
+    font-size: 0.6rem;
+}
+
+.button-row div > button {
+    font-size: 0.6rem;
 }
 
 .button-row > div > button, .button-row > div {
@@ -211,7 +218,6 @@ form > .form-control {
 /********* Email Cards *******/
 /*****************************/
 .scrollable-email-cards {
-    background-color: hsla(177, 100%, 25%, 0.5);
     padding: 1rem;
     border-radius: 25px;
     margin-top: 1rem;
@@ -225,7 +231,15 @@ form > .form-control {
     width: 100%;
     height: fit-content;
     background: var(--hyrule-theme-color1);
+    font-size: 0.6rem !important;
 }
+
+
+
+.card-title, .card-date, .card-content {
+    margin-bottom: 0 !important;
+}
+
 
 /* Hover Effect for card */
 .card-shadow {
@@ -237,6 +251,7 @@ form > .form-control {
     height: 36px;
     border-radius: 50%;
     background-color: var(--hyrule-theme-color4);
+    border: 3px solid var(--hyrule-theme-color2);
     padding: 2px;
 }
 
@@ -258,6 +273,10 @@ form > .form-control {
 }
 
 @media screen and (min-width: 768px) {
+    .scrollable-email-cards {
+        background-color: hsla(177, 100%, 25%, 0.5);
+    }
+
     #email-content {
         display: block;
     }
@@ -328,6 +347,7 @@ form > .form-control {
     /* Modify Compose Button to fit */
     #compose {
         width: fit-content;
+        max-width: 100%;
         margin: 0;
         padding: 5px;
     }
@@ -360,13 +380,16 @@ form > .form-control {
   
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1200px) {
     #compose {
         width: 100%;
         margin: 0;
         padding: 0 10px;
     }
+}
 
+@media screen and (min-width: 1440px) {
+    
     /* Display Branding Bigger Branding */
     .navbar-brand #large-logo {
         width: 100%;
