@@ -15,7 +15,8 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Electrolize', sans-serif;
+    font-weight: bold;
 }
 
 html,body {
@@ -53,7 +54,7 @@ ul > li, li {
 
 .dark-icon,
 .light-icon {
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .inner-email-icons li .dark-icon {
@@ -66,7 +67,6 @@ ul > li, li {
 .navbar {
     display: block;
     padding-left: 0.5rem;
-    font-size: 0.8rem;
 }
 
 .navbar-collapse .navbar-nav {
@@ -105,7 +105,7 @@ ul > li, li {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    font-weight: 600;
+    font-weight: 200;
 }
 
 /* Keep text color of nav-link in normal state, hover state and focus state */
@@ -137,6 +137,14 @@ ul > li, li {
 }
 
 /* Compose Modal */
+.modal-dialog {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    margin: 0 1% 0 0;
+    right: 0;
+}
+
 .modal-header, .modal-footer {
     border: none;
 }
@@ -189,6 +197,7 @@ form > .form-control {
 .fa-magnifying-glass {
     position: absolute;
     padding: 10px 15px;
+    transform: rotateY(180deg);
 }
 
 /*****************************/
@@ -197,16 +206,11 @@ form > .form-control {
 /* Focus, Other and Filter Buttons */
 .button-row {
     margin: 2% 0;
-    font-size: 0.6rem;
 }
 
-.button-row div > button {
-    font-size: 0.6rem;
-}
 
 .button-row > div > button, .button-row > div {
     color: var(--hyrule-theme-color1);
-    font-weight: 600;
 }
 
 .btn-outline-1 {
@@ -219,19 +223,17 @@ form > .form-control {
 /*****************************/
 .scrollable-email-cards {
     padding: 1rem;
-    border-radius: 25px;
+    border-radius: 25px 0 0 25px;
     margin-top: 1rem;
 }
 
 /* Modify preset card values */
 .card {
-    padding: 1rem;
     border-radius: 25px;
     margin: 0px 0px 20px;
     width: 100%;
     height: fit-content;
     background: var(--hyrule-theme-color1);
-    font-size: 0.6rem !important;
 }
 
 
@@ -260,6 +262,19 @@ form > .form-control {
     display: none;
 }
 
+.email-date, .email-body {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.email-subject  {
+    font-size: 1.25rem;
+}
+
+.accordion {
+    width: 60px;
+}
+
 /* Right Side Bar */
 
 .right-sidebar {
@@ -275,6 +290,28 @@ form > .form-control {
 @media screen and (min-width: 768px) {
     .scrollable-email-cards {
         background-color: hsla(177, 100%, 25%, 0.5);
+        height: 82vh;
+        overflow-y: scroll;
+        margin-top: 0;
+    }
+
+    /* Template from W3-schools */
+    /* width */
+    .scrollable-email-cards::-webkit-scrollbar {
+        width: 5px;
+    }
+  
+    /* Track */
+    .scrollable-email-cards::-webkit-scrollbar-track {
+        background: var(--hyrule-theme-color1);
+        border-radius: 25px;
+    }
+  
+    /* Handle */
+    .scrollable-email-cards::-webkit-scrollbar-thumb {
+        background: rgb(0,59,56);
+        background: linear-gradient(360deg, rgba(0,59,56,1) 0%, rgba(4,180,27,1) 35%, rgba(159,231,166,1) 100%);
+        border-radius: 25px;
     }
 
     #email-content {
@@ -331,11 +368,12 @@ form > .form-control {
 
     .navbar-expand-lg .offcanvas  {
         margin-top: 0;
-        width: min(100%, 200px) !important;
+        width: min(90%, 250px) !important;
     }
 
     .navbar-nav {
         padding: 0;
+        margin-top: 3.5rem;
     }
 
     /* Display Branding */
@@ -351,32 +389,6 @@ form > .form-control {
         margin: 0;
         padding: 5px;
     }
-
-    /* Scrollable Email Cards Section */
-    .scrollable-email-cards {
-        height: 82vh;
-        overflow-y: scroll;
-        margin-top: 0;
-    }
-
-    /* Template from W3-schools */
-    /* width */
-    .scrollable-email-cards::-webkit-scrollbar {
-        width: 10px;
-    }
-  
-    /* Track */
-    .scrollable-email-cards::-webkit-scrollbar-track {
-        background: var(--hyrule-theme-color1);
-        border-radius: 25px;
-    }
-  
-    /* Handle */
-    .scrollable-email-cards::-webkit-scrollbar-thumb {
-        background: rgb(0,59,56);
-        background: linear-gradient(360deg, rgba(0,59,56,1) 0%, rgba(4,180,27,1) 35%, rgba(159,231,166,1) 100%);
-        border-radius: 25px;
-    }
   
 }
 
@@ -386,6 +398,15 @@ form > .form-control {
         margin: 0;
         padding: 0 10px;
     }
+
+    .button-row {
+        margin-bottom: 2.5rem;
+    }
+
+    .navbar-nav {
+        margin-top: 1rem;
+    }
+
 }
 
 @media screen and (min-width: 1440px) {

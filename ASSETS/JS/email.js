@@ -36,7 +36,7 @@ async function jsonList(item) {
       <div class="d-flex justify-content-between">
         <div class="d-flex align-items-center">
           <img src="${item.profile}" class="profile">
-          <h6 class="ms-2 card-title"> ${item.sender}</h6> 
+          <h4 class="ms-2 card-title"> ${item.sender}</h4> 
         </div>
         <div class="d-flex align-items-center">
           <p class="col text-muted card-date"> ${item.time}</p>
