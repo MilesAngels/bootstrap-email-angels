@@ -22,7 +22,6 @@
 html,body {
     width: 100%;
     margin: 0; 
-    background-color: var(--hyrule-theme-color4);
 }
 
 main {
@@ -37,6 +36,10 @@ ul > li, li {
     width: 100%; /* Force full width */
     padding: 0; /* Remove Padding */
     margin: 0 !important; /* Remove Margin */
+}
+
+.full-width {
+    background-color: var(--hyrule-theme-color4);
 }
 
 /*****************************/
@@ -64,6 +67,10 @@ ul > li, li {
 /*****************************/
 /********* Navigation ********/
 /*****************************/
+.column {
+    height: 0;
+}
+
 .navbar {
     display: block;
     padding-left: 0.5rem;
@@ -79,8 +86,8 @@ ul > li, li {
 
 .navbar-toggler {
     position: absolute;
-    top: 28px;
-    left: 20px;
+    top: 2.25rem;
+    left: 1.15rem;
     padding: 0;
     border: none;
 }
@@ -93,6 +100,7 @@ ul > li, li {
 .navbar-nav {
     padding: 4%;
     width: 100%;
+    margin-top: 3rem;
 }
 
 /* Make offcanvas only 50% - 200px max to display nav-items when in mobile - tablet*/
@@ -391,13 +399,9 @@ form > .form-control {
     .column {
         display: flex;
         flex-direction: column;
-        align-items: flex-start !important;
+        align-items: center !important;
     }
 
-    .navbar-expand-lg .offcanvas  {
-        margin-top: 0;
-        width: min(90%, 250px) !important;
-    }
 
     .navbar-nav {
         padding: 0;
@@ -432,8 +436,9 @@ form > .form-control {
         border-radius: 5px;
     }
 
+    /* add top margin to form */
     form > .form-control, .fa-magnifying-glass {
-        margin: 1rem 0 0 0 !important;
+        margin: 0 !important;
     }
 
     .right-sidebar {
@@ -469,12 +474,42 @@ form > .form-control {
         display: block;
     }
 
-
+    .navbar-expand-lg .offcanvas {
+        width: 230px !important;
+    }
 
 }
 
 @media screen and (min-width: 1440px) {
+    .full-width {
+        width: 1440px !important;
+        margin: 0 auto !important;
+    }
     
+    body {
+        color: var(--hyrule-theme-color1);
+        --s: 30px; /* control the size */
+            --c1: var(--hyrule-theme-color4);
+            --c2: var(--hyrule-theme-color2);
+            --_s:37.5% 12.5% at 62.5%;
+            --_g:34% 99%,#0000 101%;
+            --g1:radial-gradient(var(--_s) 100%,#0000 32%,var(--c1) var(--_g));
+            --g2:radial-gradient(var(--_s) 0   ,#0000 32%,var(--c1) var(--_g));
+            --g3:radial-gradient(var(--_s) 100%,#0000 32%,var(--c2) var(--_g));
+            --g4:radial-gradient(var(--_s) 0   ,#0000 32%,var(--c2) var(--_g));
+            background:
+              var(--g1),
+              var(--g2) 0                calc(3*var(--s)),
+              var(--g3) var(--s)         calc(3*var(--s)),
+              var(--g4) var(--s)         calc(6*var(--s)),
+              var(--g1) calc(2*var(--s)) calc(6*var(--s)),
+              var(--g2) calc(2*var(--s)) calc(9*var(--s)),
+              var(--g3) calc(3*var(--s)) calc(9*var(--s)),
+              var(--g4) calc(3*var(--s)) 0,
+              repeating-linear-gradient(var(--c1) 0 25%,var(--c2) 0 50%);
+            background-size: calc(4*var(--s)) calc(12*var(--s));
+            border-radius: 25px;
+    }
     /* Display Branding Bigger Branding */
     .navbar-brand #large-logo {
         width: 100%;
