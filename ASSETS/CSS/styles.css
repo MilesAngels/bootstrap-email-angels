@@ -272,7 +272,10 @@ form > .form-control {
     padding: 2px;
 }
 
-/* Email Content */
+/*****************************/
+/*** Email Preview Content ***/
+/*****************************/
+
 #email-content {
     display: none;
 }
@@ -286,12 +289,13 @@ form > .form-control {
     font-size: 1.25rem;
 }
 
-.accordion {
+.accordion-icon {
     width: 60px;
 }
 
-/* Right Side Bar */
-
+/*****************************/
+/******* Right Side Bar ******/
+/*****************************/
 .right-sidebar {
     position: fixed;
     bottom: 0;
@@ -303,6 +307,10 @@ form > .form-control {
     align-items: center;
 }
 
+
+/*****************************/
+/******** Media Queries ******/
+/*****************************/
 @media screen and (min-width: 768px) {
     .scrollable-email-cards {
         background-color: hsla(177, 100%, 25%, 0.5);
@@ -312,18 +320,18 @@ form > .form-control {
     }
 
     /* Template from W3-schools */
-    /* width */
+    /* Scrollbar Width */
     .scrollable-email-cards::-webkit-scrollbar {
         width: 5px;
     }
   
-    /* Track */
+    /* Scrollbar Track */
     .scrollable-email-cards::-webkit-scrollbar-track {
         background: var(--hyrule-theme-color1);
         border-radius: 25px;
     }
   
-    /* Handle */
+    /* Scrollbar Handle */
     .scrollable-email-cards::-webkit-scrollbar-thumb {
         background: rgb(0,59,56);
         background: linear-gradient(360deg, rgba(0,59,56,1) 0%, rgba(4,180,27,1) 35%, rgba(159,231,166,1) 100%);
@@ -374,7 +382,6 @@ form > .form-control {
 
 }
 
-/* Media Queries */
 @media screen and (min-width: 992px) {
     .column {
         display: flex;
@@ -398,7 +405,7 @@ form > .form-control {
         height: 32px;
     }
 
-    /* Modify Compose Button to fit */
+    /* Modify Compose Button to Be More Uniformed */
     #compose {
         width: fit-content;
         max-width: 100%;
@@ -411,6 +418,7 @@ form > .form-control {
         display: none;
     }
 
+    /* Set all tooltip attributes */
     .nav-tooltip, .sidebar-tooltip, .email-header-tooltip {
         --bs-tooltip-bg: var(--hyrule-theme-color1);
         font-weight: 600;
