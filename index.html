@@ -30,10 +30,10 @@
 <body class="container-fluid">
   <main class="row full-width">
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg col-1 col-lg-1 col-xl-2">
+    <nav class="navbar navbar-expand-lg col-lg-1 col-xl-2">
       <div class="container column">
-        <!-- Nav Toggle Button -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" href="#offcanvasMenu" role="button"
+
+        <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas" href="#offcanvasMenu" role="button"
           aria-controls="offcanvasMenu">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -95,12 +95,13 @@
     </nav>
 
     <!-- Search Bar and Buttons Row Container -->
-    <div class="col-11 col-lg-10 col-xl-9">
+    <div class="col-12 col-lg-10 col-xl-9">
+
       <!-- Search Bar -->
-      <form class="d-flex">
-        <input class="form-control" type="search" aria-label="Search" />
-        <i class="dark-icon fa-solid fa-magnifying-glass"></i>
-      </form>
+        <form class="d-flex container-fluid">
+          <input class="form-control" type="search" aria-label="Search" />
+          <i class="ms-5 dark-icon fa-solid fa-magnifying-glass"></i>
+        </form>
 
       <!-- Buttons Row Container -->
       <div class="button-row d-flex flex-row justify-content-between">
@@ -114,14 +115,14 @@
       </div>
 
       <!-- Container for Email Cards and Preview Email -->
-      <div class="row">
+      <div class="row px-3">
         <!-- Scrollable Email Cards Section -->
         <section class="scrollable-email-cards col-12 col-md-5 col-xl-4">
           <!-- Contents are populated by email.js from email.json -->
         </section>
 
         <!-- Email Preview -->
-        <article id="email-content" class="col-7 col-xl-8 ps-5">
+        <article id="email-content" class="col-7 col-xl-8 ps-5 pe-0">
           <div class="p-4">
             <div class="inner-email-content p-4">
               <ul class="d-flex justify-content-between px-0">
