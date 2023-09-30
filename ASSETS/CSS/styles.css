@@ -25,7 +25,8 @@ html,body {
 }
 
 main {
-    height: 100vh;
+    height: 100%;
+    background-color: var(--hyrule-theme-color4);
 }
 
 ul > li, li {
@@ -36,10 +37,6 @@ ul > li, li {
     width: 100%; /* Force full width */
     padding: 0; /* Remove Padding */
     margin: 0 !important; /* Remove Margin */
-}
-
-.full-width {
-    background-color: var(--hyrule-theme-color4);
 }
 
 /*****************************/

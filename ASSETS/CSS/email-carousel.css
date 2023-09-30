@@ -1,0 +1,21 @@
+.carousel-indicators {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel-indicators [data-bs-target] {
+    height: fit-content;
+    
+}
+
+.carousel-indicators .text[data-bs-target] {
+    width: auto;
+    height: fit-content;
+    text-indent: 0;
+}
+
+.card {
+    width: 250px;
+    color: black;
+}
