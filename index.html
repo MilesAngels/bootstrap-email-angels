@@ -58,7 +58,7 @@
 
             <!-- Compose -->
             <li class="nav-item p-2" data-bs-toggle="tooltip" data-bs-title="Compose" data-bs-placement="right"
-              data-bs-custom-class="custom-tooltip">
+              data-bs-custom-class="nav-tooltip">
               <button id="compose" data-bs-toggle="modal" data-bs-target="#compose-modal">
                 <i class="dark-icon fa-regular fa-pen-to-square"></i>
                 <a class="nav-link d-lg-none d-xl-block" aria-current="page" href="#">Compose</a>
@@ -67,28 +67,28 @@
 
             <!-- Inbox -->
             <li class="nav-item item-hover p-2" data-bs-toggle="tooltip" data-bs-title="Inbox" data-bs-placement="right"
-              data-bs-custom-class="custom-tooltip">
+              data-bs-custom-class="nav-tooltip">
               <i class="light-icon fa-solid fa-inbox"></i>
               <a class="nav-link d-lg-none d-xl-block" aria-current="page" href="#">Inbox</a>
             </li>
 
             <!-- Starred -->
             <li class="nav-item item-hover p-2" data-bs-toggle="tooltip" data-bs-title="Starred"
-              data-bs-placement="right" data-bs-custom-class="custom-tooltip">
+              data-bs-placement="right" data-bs-custom-class="nav-tooltip">
               <i class="light-icon fa-solid fa-star"></i>
               <a class="nav-link d-lg-none d-xl-block" href="#">Starred</a>
             </li>
 
             <!-- Sent -->
             <li class="nav-item item-hover p-2" data-bs-toggle="tooltip" data-bs-title="Sent" data-bs-placement="right"
-              data-bs-custom-class="custom-tooltip">
+              data-bs-custom-class="nav-tooltip">
               <i class="light-icon fa-solid fa-paper-plane"></i>
               <a class="nav-link d-lg-none d-xl-block" href="#">Sent</a>
             </li>
 
             <!-- Drafts -->
             <li class="nav-item item-hover p-2" data-bs-toggle="tooltip" data-bs-title="Drafts"
-              data-bs-placement="right" data-bs-custom-class="custom-tooltip">
+              data-bs-placement="right" data-bs-custom-class="nav-tooltip">
               <i class="light-icon fa-solid fa-note-sticky"></i>
               <a class="nav-link d-lg-none d-xl-block" href="#">Drafts</a>
             </li>
@@ -135,11 +135,10 @@
                   <li class="fs-3">Kass</li>
                 </span>
                 <span class="inner-email-icons d-flex justify-content-evenly align-items-center">
-                  <li class="me-3"><button class="btn p-0"><i class="fa-solid fa-print"></i></button></li>
-                  <li class="me-3"><button class="btn p-0"><i
-                        class="dark-icon fa-solid fa-arrow-up-right-from-square"></i></button></li>
-                  <li class="me-3"><button class="btn p-0"><i class="dark-icon fa-solid fa-reply"></i></button></li>
-                  <li><button class="btn p-0"><i class="dark-icon fa-solid fa-ellipsis-vertical"></i></button></li>
+                  <li class="me-3" data-bs-toggle="tooltip" data-bs-title="Print" data-bs-placement="top" data-bs-custom-class="email-header-tooltip"><button class="btn p-0"><i class="fa-solid fa-print"></i></button></li>
+                  <li class="me-3" data-bs-toggle="tooltip" data-bs-title="In New Window" data-bs-placement="top" data-bs-custom-class="email-header-tooltip"><button class="btn p-0"><i class="dark-icon fa-solid fa-arrow-up-right-from-square"></i></button></li>
+                  <li class="me-3" data-bs-toggle="tooltip" data-bs-title="Reply" data-bs-placement="top" data-bs-custom-class="email-header-tooltip"><button class="btn p-0"><i class="dark-icon fa-solid fa-reply"></i></button></li>
+                  <li data-bs-toggle="tooltip" data-bs-title="More Options" data-bs-placement="top" data-bs-custom-class="email-header-tooltip"><button class="btn p-0"><i class="dark-icon fa-solid fa-ellipsis-vertical"></i></button></li>
                 </span>
               </ul>
               <ul class="d-flex justify-content-between px-2 mt-5">
@@ -199,6 +198,16 @@
       </div>
     </div>
 
+    <!-- Side bar -->
+    <aside class="p-0 col-lg-1 d-flex justify-content-end">
+      <ul class="ms-4 right-sidebar d-flex">
+        <li data-bs-toggle="tooltip" data-bs-title="My Profile" data-bs-placement="bottom" data-bs-custom-class="nav-tooltip"><img src="./ASSETS/IMG/dracula.png" alt="user_profile" class="profile"></li>
+        <li data-bs-toggle="tooltip" data-bs-title="Calendar" data-bs-placement="bottom" data-bs-custom-class="sidebar-tooltip"><i class="dark-icon fa-solid fa-calendar"></i></li>
+        <li data-bs-toggle="tooltip" data-bs-title="More Options" data-bs-placement="bottom" data-bs-custom-class="sidebar-tooltip"><i class="dark-icon fa-solid fa-ellipsis"></i></li>
+        <li data-bs-toggle="tooltip" data-bs-title="Settings" data-bs-placement="bottom" data-bs-custom-class="sidebar-tooltip"><i class="dark-icon fa-solid fa-gear"></i></li>
+      </ul>
+    </aside>
+
     <!-- Modal -->
     <div class="modal fade" id="compose-modal" tabindex="-1" aria-labelledby="compose-modal" aria-hidden="true">
       <div class="modal-dialog">
@@ -230,16 +239,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Side bar -->
-    <aside class="p-0 col-lg-1">
-      <ul class="ms-4 right-sidebar d-flex flex-column justify-content-start">
-        <li><img src="./ASSETS/IMG/dracula.png" alt="user_profile" class="profile"></li>
-        <li><i class="dark-icon fa-solid fa-calendar"></i></li>
-        <li><i class="dark-icon fa-solid fa-ellipsis"></i></li>
-        <li class=""><i class="dark-icon fa-solid fa-gear"></i></li>
-      </ul>
-    </aside>
   </main>
   <!-- Bootstrap 5 JS CDN -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
