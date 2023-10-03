@@ -486,14 +486,17 @@ form > .form-control {
     body {
         color: var(--hyrule-theme-color1);
         --s: 30px; /* control the size */
-            --c1: var(--hyrule-theme-color4);
-            --c2: var(--hyrule-theme-color2);
+            --c1: var(--hyrule-theme-color3);
+            --c2: var(--hyrule-theme-color1);
+            --c3: var(--hyrule-theme-color2);
+            --c4: var(--hyrule-theme-color4);
             --_s:37.5% 12.5% at 62.5%;
             --_g:34% 99%,#0000 101%;
             --g1:radial-gradient(var(--_s) 100%,#0000 32%,var(--c1) var(--_g));
             --g2:radial-gradient(var(--_s) 0   ,#0000 32%,var(--c1) var(--_g));
             --g3:radial-gradient(var(--_s) 100%,#0000 32%,var(--c2) var(--_g));
             --g4:radial-gradient(var(--_s) 0   ,#0000 32%,var(--c2) var(--_g));
+
             background:
               var(--g1),
               var(--g2) 0                calc(3*var(--s)),
@@ -507,6 +510,8 @@ form > .form-control {
             background-size: calc(4*var(--s)) calc(12*var(--s));
             border-radius: 25px;
     }
+
+    
     /* Display Branding Bigger Branding */
     .navbar-brand #large-logo {
         width: 100%;
