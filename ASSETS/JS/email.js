@@ -1,10 +1,7 @@
 "use strict";
 
+// Select the element called section as the main container of the cards
 const main = document.querySelector("section");
-//console.log(output); // <div class="output"></div>
-
-//output.textContent = "New Content";
-//console.log(output); // <div class="output">New content</div>
 
 // Storing json data in a variable
 const localJsonFile = "./ASSETS/JS/email.json";
@@ -13,11 +10,11 @@ const localJsonFile = "./ASSETS/JS/email.json";
 // without waiting for stylesheets, images, and subframes to finish loading.
 window.addEventListener("DOMContentLoaded", () => {
   
+  // Fet contents in JSON file
   fetch(localJsonFile)
     .then((response) => response.json()) // and the response we get is in json format
     .then((data) => {
       // we call that data here
-      // console.log(data); // check the data on the console
       main.innerHTML = ""; // Initial content is empty
       data.forEach((el) => {
         // loop through the json data using forEach method
